@@ -1,49 +1,31 @@
 .flower-card {
   display: flex;
-  flex: 1 1 220px;
-  min-height: 230px;
-  max-width: 320px;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  border: 1px solid rgb(63 48 33 / 12%);
-  border-radius: 20px;
-  padding: 24px 20px;
-  box-shadow: 0 8px 20px rgb(73 54 33 / 10%);
+  gap: 5px;
+  width: 220px;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #999;
+  border-radius: 5px;
   cursor: pointer;
-  font: inherit;
+  font-size: 16px;
   text-align: center;
-  transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
-.flower-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgb(73 54 33 / 18%);
-}
-
-.flower-card:focus-visible {
-  outline: 3px solid #276749;
-  outline-offset: 3px;
-}
-
-.flower-illustration {
-  font-size: 3.5rem;
-  line-height: 1;
+.flower-image {
+  width: 140px;
+  height: 110px;
+  object-fit: contain;
 }
 
 .flower-name {
-  font-size: 1.5rem;
+  margin: 5px 0;
+  font-size: 22px;
   font-weight: 700;
 }
 
 .flower-details,
 .flower-code {
-  font-size: 0.9rem;
-}
-
-.flower-hint {
-  margin-top: 4px;
-  font-size: 0.8rem;
-  opacity: 0.8;
+  font-size: 14px;
 }

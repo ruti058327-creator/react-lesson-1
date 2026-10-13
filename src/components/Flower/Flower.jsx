@@ -6,15 +6,12 @@ export default function Flower(props) {
   const flowerName = props.flowerName || 'פרח ללא שם';
 
   return (
-    <button
+    <div
       className="flower-card"
-      type="button"
       style={{ backgroundColor: petalColor, color: centerColor }}
       onClick={() => alert(`אני פרח מסוג ${flowerName}`)}
     >
-      <span className="flower-illustration" aria-hidden="true">
-        ✿
-      </span>
+      <img className="flower-image" src="/1.png" alt="" />
       <span className="flower-name">{flowerName}</span>
       <span className="flower-details">
         צבע עלי הכותרת: {petalColor}, צבע המרכז: {centerColor}
@@ -22,7 +19,6 @@ export default function Flower(props) {
       <span className="flower-code">
         קוד פרח: {props.code || 'ללא קוד'}
       </span>
-      <span className="flower-hint">לחיצה לפרטים</span>
-    </button>
+    </div>
   );
 }

@@ -2,25 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 36px 20px 28px;
-  color: #355e3b;
+  text-align: center;
 }
 
 .garden-header-image {
-  width: min(100%, 300px);
-  height: 190px;
-  border-radius: 24px;
-  object-fit: cover;
-  box-shadow: 0 10px 24px rgb(44 73 42 / 16%);
+  width: 200px;
 }
 
 .header-title {
-  margin: 20px 0 4px;
-  color: #276749;
-  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  margin: 10px 0;
+  color: darkgreen;
+  font-family: Arial, sans-serif;
 }
 
 .garden-header p {
-  margin: 0;
-  color: #65705b;
+  margin: 5px 0;
 }
