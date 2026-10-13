@@ -1,25 +1,30 @@
-import './App.css';
-import Header from './components/Header/Header';
+import React from 'react';
 import Flower from './components/Flower/Flower';
 
 function App() {
+  const flowers = [
+    { id: 1, name: 'ורד', color: 'אדום', price: 15 },
+    { id: 2, name: 'חמניה', color: 'צהוב', price: 12 },
+    { id: 3, name: 'צבעוני', color: 'ורוד', price: 10 },
+    { id: 4, name: 'סחלב', color: 'לבן', price: 35 }
+  ];
+
   return (
-    <>
-      <Header />
-      
-      {/* הפרח המלא שהיה לנו */}
-      <Flower flowerName="חמנייה" petalColor="yellow" centerColor="brown" />
-
-      {/* מופע 1: רק שם וצבע עלי כותרת */}
-      <Flower flowerName="כלנית" petalColor="red" />
-
-      {/* מופע 2: רק שם וצבע עלה מרכזי */}
-      <Flower flowerName="סיגל" centerColor="purple" />
-
-      {/* מופע 3: רק שם הפרח */}
-      <Flower flowerName="מרגנית" />
-    </>
-  )
+    <div style={{ padding: '24px', fontFamily: 'sans-serif', direction: 'rtl' }}>
+      <h1>רשימת הפרחים בגינה</h1>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+        {flowers.map((flower) => (
+          <Flower
+            key={flower.id}
+            id={flower.id}
+            name={flower.name}
+            color={flower.color}
+            price={flower.price}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default App;
