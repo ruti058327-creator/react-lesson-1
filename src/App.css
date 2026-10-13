@@ -1,6 +1,28 @@
-.header-title {
-  color: darkgreen;
+.garden-app {
+  width: min(100% - 32px, 1080px);
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+
+.garden-section {
+  margin-top: 24px;
+}
+
+.section-title {
+  margin: 0 0 20px;
+  color: #355e3b;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   text-align: center;
-  font-size: 3rem;
-  font-family: Arial, sans-serif;
+}
+
+.flower-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.defaults-section {
+  padding-top: 24px;
+  border-top: 1px solid #e4e8dc;
 }

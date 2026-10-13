@@ -1,18 +1,28 @@
+import './Flower.css';
+
 export default function Flower(props) {
-  // תנאי מקוצר: אם props.petalColor קיים - קח אותו, אם לא - קח "pink"
-  const petalColor = props.petalColor || "pink";
-  const centerColor = props.centerColor || "yellow";
-  const flowerName = props.flowerName || "פרח ללא שם";
+  const petalColor = props.petalColor || '#fbcfe8';
+  const centerColor = props.centerColor || '#a16207';
+  const flowerName = props.flowerName || 'פרח ללא שם';
 
   return (
-    <div 
-      style={{ backgroundColor: petalColor, padding: '20px', margin: '20px', borderRadius: '10px' }}
+    <button
+      className="flower-card"
+      type="button"
+      style={{ backgroundColor: petalColor, color: centerColor }}
       onClick={() => alert(`אני פרח מסוג ${flowerName}`)}
     >
-      <h2 style={{ color: centerColor }}>{flowerName}</h2>
-      <p style={{ color: centerColor }}>
-        צבע העלים: {petalColor}, צבע המרכז: {centerColor}
-      </p>
-    </div>
+      <span className="flower-illustration" aria-hidden="true">
+        ✿
+      </span>
+      <span className="flower-name">{flowerName}</span>
+      <span className="flower-details">
+        צבע עלי הכותרת: {petalColor}, צבע המרכז: {centerColor}
+      </span>
+      <span className="flower-code">
+        קוד פרח: {props.code || 'ללא קוד'}
+      </span>
+      <span className="flower-hint">לחיצה לפרטים</span>
+    </button>
   );
 }

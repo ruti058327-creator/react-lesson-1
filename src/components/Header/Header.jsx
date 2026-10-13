@@ -1,15 +1,12 @@
 import myImage from './1.png';
+import './Header.css';
+
 export default function Header() {
   return (
-    <div>
-      {/* שימי לב ל- className במקום class */}
-      <h1 className="header-title">הגינה שלי</h1> 
-      
-      {/* משתמשים בתמונה שהבאנו בתוך התגית img */}
-      <img src={myImage} alt="תמונת גינה" style={{ display: 'block', margin: '0 auto', width: '300px' }} />
-    </div>
+    <header className="garden-header">
+      <img className="garden-header-image" src={myImage} alt="" />
+      <h1 className="header-title">הגינה שלי</h1>
+      <p>ברוכים הבאים לגינה הצבעונית שלי</p>
+    </header>
   );
 }
-
-
-
