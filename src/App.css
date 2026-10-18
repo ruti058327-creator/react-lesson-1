@@ -1,24 +1,175 @@
-.garden-app {
-  padding: 20px;
+#root {
+  min-height: 100vh;
 }
 
-.garden-section {
-  margin-top: 20px;
+.todo-app {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 18px;
+  background:
+    radial-gradient(circle at 12% 18%, rgb(167 243 208 / 48%), transparent 28%),
+    radial-gradient(circle at 88% 82%, rgb(191 219 254 / 55%), transparent 30%),
+    #f4f7f5;
 }
 
-.section-title {
-  margin-bottom: 15px;
-  color: darkgreen;
+.todo-card {
+  width: min(100%, 620px);
+  padding: clamp(24px, 5vw, 44px);
+  border: 1px solid #e4ebe6;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgb(31 66 48 / 12%);
+}
+
+.todo-header {
+  margin-bottom: 32px;
   text-align: center;
 }
 
-.flower-list {
+.todo-eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #16845a;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.todo-header h1 {
+  margin: 0;
+  color: #18372a;
+  font-size: clamp(1.8rem, 6vw, 2.4rem);
+}
+
+.todo-header p {
+  margin: 10px 0 0;
+  color: #708078;
+  line-height: 1.6;
+}
+
+.todo-form {
+  margin-bottom: 32px;
+}
+
+.todo-form label {
+  display: block;
+  margin-bottom: 9px;
+  color: #30483b;
+  font-weight: 700;
+}
+
+.todo-form-row {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 10px;
 }
 
-.defaults-section {
-  margin-top: 30px;
+.todo-form input {
+  min-width: 0;
+  flex: 1;
+  padding: 13px 15px;
+  border: 1px solid #d5dfd8;
+  border-radius: 10px;
+  color: #20352a;
+  font: inherit;
+}
+
+.todo-form input:focus {
+  border-color: #1b9b68;
+  outline: 3px solid rgb(27 155 104 / 16%);
+}
+
+.todo-form button {
+  padding: 0 23px;
+  border: 0;
+  border-radius: 10px;
+  background: #18885d;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.todo-form button:hover {
+  background: #116d49;
+}
+
+.todo-form button:focus-visible {
+  outline: 3px solid #83d9b3;
+  outline-offset: 2px;
+}
+
+.form-message {
+  min-height: 1.4em;
+  margin: 7px 0 0;
+  color: #b42318;
+  font-size: 0.9rem;
+}
+
+.list-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #e9efeb;
+}
+
+.list-heading h2 {
+  margin: 0;
+  color: #294536;
+  font-size: 1.15rem;
+}
+
+.todo-count {
+  display: grid;
+  min-width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e7f5ed;
+  color: #16724e;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.todo-list {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #edf1ee;
+  border-radius: 12px;
+  background: #fbfcfb;
+  color: #35483d;
+  line-height: 1.5;
+}
+
+.todo-check {
+  display: grid;
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
+  place-items: center;
+  border: 1px solid #b7ddc8;
+  border-radius: 50%;
+  color: #16845a;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 420px) {
+  .todo-form-row {
+    flex-direction: column;
+  }
+
+  .todo-form button {
+    min-height: 46px;
+  }
 }
